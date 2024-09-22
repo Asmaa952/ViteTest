@@ -83,7 +83,8 @@ async function onSubmit(){
 
           <div className="mt-4 text-center">
             <span className="text-sm text-gray-500 dark:text-gray-300">Already have an account? </span>
-            <Link  to={"/register"} className="text-blue-500 hover:text-blue-600">Register  </Link>
+            <Link  to={"/register"} className="text-blue-500 hover:text-blue-600">Register  </Link> 
+            <p><Link  to={"/forget"} className="text-blue-500 hover:text-blue-600">Forget Password</Link></p>
           </div>
     
         </div>

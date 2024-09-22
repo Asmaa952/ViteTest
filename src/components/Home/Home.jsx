@@ -3,6 +3,8 @@ import React, { useEffect, useState }  from 'react'
 import Product from '../product/Product'
 import {Helmet} from 'react-helmet'
 import LodingScreen from '../LodingScreen/LodingScreen';
+import { CategoriesSlider } from '../CategoriesSlider/CategoriesSlider';
+import MainSlider from '../MainSlider/MainSlider';
  
 
 export default function Home() {
@@ -23,6 +25,7 @@ async function getProducts(){
 
 if(isLoading){
   return  <LodingScreen/>
+  
 }
    
   return <> 
@@ -31,8 +34,10 @@ if(isLoading){
       <title>Home</title>
     </Helmet>
   </div>
-
-    <div className='grid grid-cols-4 gap-3'>
+       <MainSlider/>
+       <CategoriesSlider/>
+    <div className='grid grid-cols-4 gap-3 mt-6'>
+       
       {products.map((product, index) => {
         return <>  
           <Product product={product}  key={index}/>

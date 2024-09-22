@@ -35,7 +35,7 @@ if(isLoading){
       </Helmet>
     </div>
 
-    <div className='grid grid-cols-3 gap-3 mt-4'> 
+    <div className='grid grid-cols-4 gap-y-4 md:gap-4 mt-5 mx-4 md:mx-10 gap-3 '> 
       {Brand.map((Brand, index) => {
           return <>  
             <Brands Brand={Brand}  key={index}/>

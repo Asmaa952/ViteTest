@@ -22,6 +22,11 @@ import { Offline } from "react-detect-offline"
 import {QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import WishList from './components/WishList/WishList'
+import Forget from './components/Forget/Forget'
+import ResetCode from './components/ResetCode/ResetCode'
+import NewPassword from './components/NewPassword/NewPassword'
+ 
+
 
 function App() {
 
@@ -32,6 +37,9 @@ function App() {
     {index: true, element:<ProtectedRoute> <Home/> </ProtectedRoute> },
     {path: 'login', element:<ProtectedAuthRoute><Login/></ProtectedAuthRoute>  },
     {path: 'register', element: <ProtectedAuthRoute><Register/></ProtectedAuthRoute> },
+    {path: 'forget', element: <ProtectedAuthRoute><Forget/></ProtectedAuthRoute> },
+    {path: 'resetcode', element: <ProtectedAuthRoute><ResetCode/></ProtectedAuthRoute> },
+    {path: 'newpassword', element: <ProtectedAuthRoute> <NewPassword/></ProtectedAuthRoute> },
     {path: 'cart', element: <ProtectedRoute><Cart/></ProtectedRoute> },
     {path: 'products', element: <ProtectedRoute> <Products/></ProtectedRoute> },
     {path: 'categories', element:<ProtectedRoute> <Categories/></ProtectedRoute>  },

@@ -11,9 +11,9 @@ export default function Login() {
   const [isLoding, setIsLoding] = useState(false)
 
  const initialValues={
-     "details":"cairo",
-     "phone":"01228563303",
-     "city":"6 tahreer street",
+     "details":"",
+     "phone":" ",
+     "city":" ",
 };
 
  const validationSchema = Yup.object({

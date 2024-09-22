@@ -3,6 +3,9 @@ import React, { useEffect, useState} from 'react'
 import CartProduct from '../CartProduct/CartProduct';
 import { Link } from 'react-router-dom';
 import LodingScreen from '../LodingScreen/LodingScreen';
+import Navbar from '../Navbar/Navbar';
+ 
+ 
  
  
 export default function Cart() {
@@ -53,9 +56,10 @@ export default function Cart() {
       </div>
        
       <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
-        <div className="mb-2 flex justify-between">
+        <div className="mb-2  justify-between">
           <p className="text-gray-700">Subtotal</p>
           <p className="text-gray-700">${cart?.data.totalCartPrice}</p>
+          <p className='text-gray-700 mt-4'>Total items <span className='text-red-700 font-bold'>{cart?.numOfCartItems} EGP</span></p>
         </div>
         <div className="flex justify-between">
           <p className="text-gray-700">Shipping</p>
@@ -72,8 +76,11 @@ export default function Cart() {
         <Link to={"/shippingAddress/" + cart?.data._id} className="mt-6 block text-center w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</Link>
       </div>
     </div>
-    <button onClick={clearCart} className='text-red-500 border-2 border-red-500 rounded-md py-2 px-4 hover:text-white hover:bg-red-500 mx-auto block'>Clear Cart</button>
-  </div>: <h1 className='text-center text-4xl font-bold'>No products in your cart</h1>
+    <button onClick={clearCart} className='text-red-800 border-2 border-red-800 rounded-md py-2 px-4 hover:text-white hover:bg-red-800 mx-auto block'>Clear Cart</button>
+  </div>: <>   <h1 className='text-center text-4xl font-bold text-red-800'>No products in your cart</h1></>
+              
+  
+          
 
     
  
