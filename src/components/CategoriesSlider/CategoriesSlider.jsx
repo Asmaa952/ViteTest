@@ -36,7 +36,7 @@ export function CategoriesSlider() {
                 breakpoint: 1536,
                 settings: {
                     infinite: true,
-                    slidesToShow: 5,
+                    slidesToShow: 4,
                     slidesToScroll: 2,
                     initialSlide: 3
                 }    
@@ -45,8 +45,8 @@ export function CategoriesSlider() {
                 breakpoint: 960,
                 settings: {
                     infinite: true,
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                     initialSlide: 3
                 }    
             },
@@ -54,7 +54,7 @@ export function CategoriesSlider() {
                 breakpoint: 576,
                 settings: {
                     infinite: true,
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 2,
                     initialSlide: 3
                 }    
@@ -67,10 +67,10 @@ export function CategoriesSlider() {
         <h2 className="m-3 text-2xl font-semibold">Shop Popular Categories:</h2>
         <Slider {...settings}>
             {categories.map((category, index) => {
-                return <div key={index} className='cursor-pointer mt-6'>
+                return <div key={index} className='cursor-pointer mt-6 '>
                     <Link >
                         <div className='flex flex-col justify-center items-center'>
-                           <div className='rounded-full shadow-md shadow-green-400 hover:shadow-green-600 max-w-sm overflow-hidden w-[120px] h-[120px] md:w-[180px] md:h-[180px] xl:h-[200px] xl:w-[200px]'>
+                           <div className='rounded-full shadow-md shadow-green-400 hover:shadow-green-600 max-w-sm overflow-hidden w-[120px] h-[120px] md:w-[190px] md:h-[190px] xl:h-[200px] xl:w-[200px]'>
                               <img className='rounded-full w-full h-full object-cover hover:scale-110 transition-all' src={category.image} alt="freshcart categories slider imgs" />
                            </div>
                            <div>
